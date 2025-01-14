@@ -1,0 +1,38 @@
+.container {
+  padding: 0 20px;
+
+  .filter-field {
+    width: 100%;
+  }
+
+  .virtual-scroll {
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+
+    .id-text {
+      font-size: 0.8rem;
+      color: #757575;
+    }
+
+    .mdc-list {
+      padding: 0;
+    }
+
+    mat-list-item {
+      padding: 10px;
+      border-bottom: 1px solid #e0e0e0;
+
+      &.mdc-list-item.mdc-list-item--with-one-line {
+        height: auto;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}

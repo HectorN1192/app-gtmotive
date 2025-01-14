@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #007bff;
+  }
+
+  button.img-button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .user-icon {
+      font-size: 1.5rem;
+      color: #555;
+    }
+
+    .username {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+}

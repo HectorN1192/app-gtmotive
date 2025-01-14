@@ -1,0 +1,29 @@
+.table-container {
+  .filter-field {
+    width: 100%;
+  }
+
+  .mat-mdc-header-row {
+    background-color: #fff;
+  }
+
+  .mat-mdc-paginator {
+    background-color: #fff;
+  }
+
+  .mat-mdc-row {
+    &:nth-child(even) {
+      background-color: #fff;
+    }
+  }
+
+  .mat-mdc-table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .mat-mdc-header-cell,
+  .mat-mdc-cell {
+    white-space: nowrap;
+  }
+}

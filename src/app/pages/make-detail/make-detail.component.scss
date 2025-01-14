@@ -1,0 +1,35 @@
+.title {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+
+  mat-icon {
+    cursor: pointer;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+
+  &-table {
+    background-color: #fff;
+    padding: 20px;
+    height: fit-content;
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="filter-container">
+    <mat-form-field class="filter-field">
+      <mat-label>Marca</mat-label>
+      <input
+        matInput
+        placeholder="Marca"
+        type="text"
+        [formControl]="filterControl"
+      />
+    </mat-form-field>
+  </div>
+
+  @if(filteredItems$ | async; as filteredItems) {
+  <cdk-virtual-scroll-viewport
+    [itemSize]="50"
+    class="virtual-scroll"
+    [style.height.px]="10 * 50"
+  >
+    <mat-list>
+      <mat-list-item
+        *cdkVirtualFor="let item of filteredItems"
+        (click)="navigateToDetails(item.Make_ID)"
+      >
+        <div mat-line>{{ item.Make_Name }}</div>
+        <div mat-line class="id-text">ID: {{ item.Make_ID }}</div>
+      </mat-list-item>
+    </mat-list>
+  </cdk-virtual-scroll-viewport>
+  }
+</div>

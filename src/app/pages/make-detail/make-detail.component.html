@@ -1,0 +1,25 @@
+@let dataType = dataType$ | async; @let dataModel = signalStore.modelsTable();
+@if(dataTitle()) {
+<div class="title">
+  <mat-icon (click)="goToHome()">arrow_back</mat-icon>
+  <span class="title__data"> {{ dataTitle() }}</span>
+</div>
+}
+<section class="content">
+  @if(dataType && dataModel) {
+  <section class="content-table">
+    <p class="content-table__title">Tipos de vehiculos</p>
+    <app-table
+      [data]="dataType"
+      [displayedColumns]="displayedColumnsType"
+    ></app-table>
+  </section>
+  <section class="content-table">
+    <p class="content-table__title">Modelos de la marca</p>
+    <app-table
+      [data]="signalStore.modelsTable()"
+      [displayedColumns]="displayedColumnsModel"
+    ></app-table>
+  </section>
+  }
+</section>
